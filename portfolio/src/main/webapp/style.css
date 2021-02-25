@@ -7,3 +7,7 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+#page-background {
+    background-color: seashell;
+}
