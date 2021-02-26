@@ -11,8 +11,12 @@
 #page-background {
     background-color: seashell;
 }
-
 .font-stylings {
     font-family: cursive;
     text-align: center;
+}
+
+.button-center {
+    position: relative;
+    left: 300px;
 }
