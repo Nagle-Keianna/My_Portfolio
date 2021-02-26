@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['I might have a slight addiction to video games', 'I love Batman and the Joker', 'I turned myself into a pickle Morty!', "I'm pickle Rick!"];
+      ['I might have a slight addiction to video games', 'I love Batman and the Joker', 'I turned myself into a pickle Morty! (Quote)', "I'm pickle Rick! (Quote)"];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
