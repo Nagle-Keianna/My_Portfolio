@@ -8,15 +8,18 @@
   margin-top: 20px;
 }
 
-#page-background {
+#body {
     background-color: seashell;
+    font-family: cursive;
+    text-align: center;
 }
+
 .font-stylings {
     font-family: cursive;
     text-align: center;
 }
 
 .button-center {
-    position: relative;
     left: 300px;
+    position: relative;
 }
