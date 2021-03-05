@@ -1,7 +1,7 @@
 async function showServerTime() {
-  const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+  const responseFromServer = await fetch('/content');
+  const games = await responseFromServer.json();
 
-  const greetingcontainer = document.getElementById('greeting-container');
-  greetingcontainer.innerText = textFromResponse;
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = textFromResponse;
 }
