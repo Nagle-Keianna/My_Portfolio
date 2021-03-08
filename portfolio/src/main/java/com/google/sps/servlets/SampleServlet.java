@@ -12,9 +12,7 @@ import com.google.gson.Gson;
 
 @WebServlet("/content")
 public class SampleServlet extends HttpServlet {
-    /**
-     *
-     */
+
     private static final long serialVersionUID = 1L;
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
