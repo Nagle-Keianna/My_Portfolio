@@ -1,4 +1,4 @@
-async function showServerTime() {
+async function showVideoGame() {
   const responseFromServer = await fetch('/content');
   const textFromResponse = await responseFromServer.json();
 
