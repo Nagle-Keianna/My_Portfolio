@@ -4,6 +4,6 @@ async function showVideoGame() {
 
   const number = Math.floor((Math.random() * 3) + 1);
   
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = textFromResponse[number];
+  const factContainer = document.getElementById('fact-container');
+  factContainer.innerText = textFromResponse[number];
 }
