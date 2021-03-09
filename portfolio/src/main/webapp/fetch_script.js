@@ -1,7 +1,9 @@
-async function showServerTime() {
-  const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+async function showVideoGame() {
+  const responseFromServer = await fetch('/content');
+  const textFromResponse = await responseFromServer.json();
 
-  const greetingcontainer = document.getElementById('greeting-container');
-  greetingcontainer.innerText = textFromResponse;
+  const number = Math.floor((Math.random() * 3) + 1);
+  
+  const factContainer = document.getElementById('fact-container');
+  factContainer.innerText = textFromResponse[number];
 }
