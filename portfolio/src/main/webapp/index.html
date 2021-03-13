@@ -39,6 +39,13 @@
       <p>Click the button to get a random fact about me or quote:</p>
       <button class="button-center" onclick="addRandomFact()">Fact or Quote</button>
       <button onclick="showVideoGame()">Video Game I Enjoy</button>
+      <form action="/form-handler" method="POST">
+        <p>Tell me your name and what's your favorite game to play!</p>
+        <textarea name="name">Enter your name!</textarea>
+        <textarea name="favoriteGame">Enter your favorite game!</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
       <div id="fact-container"></div>
     </div>
   </body>
