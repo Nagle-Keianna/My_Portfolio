@@ -8,11 +8,3 @@ async function showVideoGame() {
   factContainer.innerText = textFromResponse[number];
 }
 
-
-function showTranslation() {
-    const responseFromServer = await fetch('/arabic');
-    const textFromResponse = await responseFromServer.text();
-
-    const factContainer = document.getElementById('fact-container');
-    factContainer.innerText = textFromResponse;
-}
