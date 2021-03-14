@@ -8,7 +8,7 @@ async function showVideoGame() {
   factContainer.innerText = textFromResponse[number];
 }
 
-async function requestTranslation() {
+function requestTranslation() {
         const text = document.getElementById('text').value;
         const languageCode = document.getElementById('language').value;
 
