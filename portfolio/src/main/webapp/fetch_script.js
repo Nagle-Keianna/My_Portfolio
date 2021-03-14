@@ -8,11 +8,22 @@ async function showVideoGame() {
   factContainer.innerText = textFromResponse[number];
 }
 
+async function requestTranslation() {
+        const text = document.getElementById('text').value;
+        const languageCode = document.getElementById('language').value;
 
-function showTranslation() {
-    const responseFromServer = await fetch('/arabic');
-    const textFromResponse = await responseFromServer.text();
+        const resultContainer = document.getElementById('fact-container');
+        resultContainer.innerText = 'Loading...';
 
-    const factContainer = document.getElementById('fact-container');
-    factContainer.innerText = textFromResponse;
-}
+        const params = new URLSearchParams();
+        params.append('text', text);
+        params.append('languageCode', languageCode);
+
+        fetch('/arabic', {
+          method: 'POST',
+          body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+      }

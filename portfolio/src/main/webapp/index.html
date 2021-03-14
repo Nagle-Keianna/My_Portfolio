@@ -46,6 +46,21 @@
         <br/>
         <input type="submit" />
       </form>
+
+      <p>If you need any of the text translated paste it into this box and pick the language!</p>
+
+      <textarea id="text"></textarea>
+
+        <select id="language">
+        <option value="en">English</option>
+        <option value="zh">Chinese</option>
+        <option value="es">Spanish</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+      </select>
+
+      <button onclick="requestTranslation();">Translate</button>
+
       <div id="fact-container"></div>
     </div>
   </body>
