@@ -6,27 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="fetch_script.js"></script>
     <script src="script.js"></script>
-    <script>
-      function requestTranslation() {
-        const text = document.getElementById('text').value;
-        const languageCode = document.getElementById('language').value;
-
-        const resultContainer = document.getElementById('fact-container');
-        resultContainer.innerText = 'Loading...';
-
-        const params = new URLSearchParams();
-        params.append('text', text);
-        params.append('languageCode', languageCode);
-
-        fetch('/arabic', {
-          method: 'POST',
-          body: params
-        }).then(response => response.text())
-        .then((translatedMessage) => {
-          resultContainer.innerText = translatedMessage;
-        });
-      }
-    </script>
   </head>
   <body>
     <div id="content">
@@ -72,15 +51,15 @@
 
       <textarea id="text"></textarea>
 
-      <select id="language">
-      <option value="en">English</option>
-      <option value="zh">Chinese</option>
-      <option value="es">Spanish</option>
-      <option value="hi">Hindi</option>
-      <option value="ar">Arabic</option>
-    </select>
+        <select id="language">
+        <option value="en">English</option>
+        <option value="zh">Chinese</option>
+        <option value="es">Spanish</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+      </select>
 
-    <button onclick="requestTranslation();">Translate</button>
+      <button onclick="requestTranslation();">Translate</button>
 
       <div id="fact-container"></div>
     </div>
