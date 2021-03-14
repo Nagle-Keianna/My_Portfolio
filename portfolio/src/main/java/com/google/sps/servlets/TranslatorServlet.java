@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/arabic")
 public class TranslatorServlet extends HttpServlet {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String originalText = request.getParameter("text");
@@ -22,6 +27,8 @@ public class TranslatorServlet extends HttpServlet {
         Translation translation = translate.translate(originalText, Translate.TranslateOption.targetLanguage(languageCode));
         String translatedText = translation.getTranslatedText();
 
-
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().println(translatedText);
     }
 }
